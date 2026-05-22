@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "day1-fullstack",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-22",
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./app/dist/app/browser",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "day1_db",
+      "database_id": "7304adc7-a764-40aa-bc34-9132d28c64c4"
+    }
+  ],
+  "vars": {
+  "GREETING": "Hello from Day 1"
+	}
+}
